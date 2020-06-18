@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(152deg, #D92027 50%, #111 50%);
+    height: 100vh;
+}
+
+h1 {
+    position: absolute;
+    top: 50%;
+    Left: 50%;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+    font-family: 'Arial Black';
+    font-size: 112px;
+    color: transparent;
+}
+
+h1::before,
+h1::after {
+    content: attr(data-text);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+h1::before {
+    top: 0;
+    left: 0;
+    clip-path: polygon(0 0, 70% 0, 30% 100%, 0 100%);
+    color: #111;
+}
+
+h1::after {
+    bottom: 0;
+    right: 0;
+    clip-path: polygon(100% 0, 70% 0, 30% 100%, 100% 100%);
+    color: #D92027;
+}
